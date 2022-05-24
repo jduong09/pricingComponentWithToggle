@@ -1,0 +1,119 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  min-height: 100vh;
+  background-color: hsl(240, 78%, 98%);
+}
+
+main {
+  width: 90%;
+  margin: 3rem auto;
+}
+
+.hide {
+  display: none !important;
+}
+
+/* Main .component-header */
+.component-header {
+  padding-bottom: 3rem;
+}
+
+.component-header > h1 {
+  font-size: 30px;
+  color: hsl(233, 13%, 49%);
+  margin-bottom: 1.5rem;
+}
+
+.pricing-toggle {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: 0 auto;
+  color: hsl(234, 14%, 74%);
+}
+
+.toggle-container {
+  width: 12.5%;
+  height: auto;
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border-radius: 500px;
+  padding: 0.75rem 0.25rem;
+  position: relative;
+}
+
+.toggle-circle {
+  content: '';
+  width: 45%;
+  height: 85%;
+  background-color: hsl(0, 0%, 100%);
+  position: absolute;
+  top: 50%;
+  right: 7.5%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+/* Section .pricing-tiers */
+
+/* ul .pricing-tiers-list */
+
+/* li .pricing-tier */
+.pricing-tier {
+  padding: 1.5rem;
+  color: hsl(233, 13%, 49%);
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+  margin: 2rem 0;
+}
+
+.pricing-tier > h2 {
+  margin-bottom: 2rem;
+}
+
+.pricing-tier > strong {
+  display: block;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: hsl(232, 13%, 33%);
+}
+
+.pricing-tier > ul {
+  margin-bottom: 1.5rem;
+}
+
+.pricing-tier-benefits-list {
+  border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+
+.pricing-tier-benefits-list > li {
+  border-top: 1px solid hsl(234, 14%, 74%);
+  padding: .75rem 0;
+}
+
+.pricing-tier > a {
+  display: block;
+  padding: 0.5rem 0;
+  color: hsl(240, 78%, 98%);
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+/* .pricing-tier #professional */
+#professional-tier {
+  color: hsl(0, 0%, 100%);
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+#professional-tier > strong {
+  color: hsl(0, 0%, 100%);
+}
+
+#professional-tier > a {
+  background: hsl(0, 0%, 100%);
+  color: hsl(237, 63%, 64%);
+}
