@@ -12,6 +12,15 @@ main {
   margin: 3rem auto;
 }
 
+#bg-top {
+  position: absolute;
+  top: -4%;
+  right: -40%;
+  width: 85%;
+  height: auto;
+  z-index: -1;
+}
+
 .hide {
   display: none !important;
 }
@@ -36,15 +45,16 @@ main {
 }
 
 .toggle-container {
-  width: 12.5%;
+  width: 40px;
   height: auto;
   background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   border-radius: 500px;
   padding: 0.75rem 0.25rem;
   position: relative;
+  pointer-events: none;
 }
 
-.toggle-circle {
+#toggle-circle {
   content: '';
   width: 45%;
   height: 85%;
@@ -54,12 +64,15 @@ main {
   right: 7.5%;
   transform: translateY(-50%);
   border-radius: 50%;
+  pointer-events: auto;
+}
+
+.toggle-container:hover {
+  background: linear-gradient(to right, hsla(236, 72%, 79%, .5), hsla(237, 63%, 64%, .5));
 }
 
 /* Section .pricing-tiers */
-
 /* ul .pricing-tiers-list */
-
 /* li .pricing-tier */
 .pricing-tier {
   padding: 1.5rem;
@@ -99,8 +112,15 @@ main {
   padding: 0.5rem 0;
   color: hsl(240, 78%, 98%);
   background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border: 1px solid hsl(236, 72%, 79%);
   border-radius: 5px;
   text-transform: uppercase;
+}
+
+.pricing-tier > a:hover {
+  background: hsl(0, 0%, 100%);
+  border-color: hsl(237, 63%, 64%);
+  color: hsl(237, 63%, 64%);
 }
 
 /* .pricing-tier #professional */
@@ -115,5 +135,17 @@ main {
 
 #professional-tier > a {
   background: hsl(0, 0%, 100%);
+  border: 1px solid hsl(0, 0%, 100%);
   color: hsl(237, 63%, 64%);
+}
+
+#professional-tier > a:hover {
+  background: hsl(237, 63%, 64%);
+  color: hsl(0, 0%, 100%);
+}
+
+/* Yearly Component toggled */
+#toggle-circle.yearly {
+  right: initial;
+  left: 7.5%;
 }
