@@ -5,11 +5,13 @@ body {
   text-align: center;
   min-height: 100vh;
   background-color: hsl(240, 78%, 98%);
+  overflow-x: hidden;
 }
 
 main {
   width: 90%;
-  margin: 3rem auto;
+  margin: 0 auto;
+  padding: 3rem 0;
 }
 
 #bg-top {
@@ -19,6 +21,10 @@ main {
   width: 85%;
   height: auto;
   z-index: -1;
+}
+
+#bg-bottom {
+  display: none;
 }
 
 .hide {
@@ -148,4 +154,63 @@ main {
 #toggle-circle.yearly {
   right: initial;
   left: 7.5%;
+}
+
+@media (min-width: 767px) {
+  #bg-top {
+    right: 0;
+    top: 0;
+    width: 30%;
+  }
+  .pricing-toggle {
+    width: 40%;
+  }
+
+  .pricing-tiers {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .pricing-tiers-list {
+    display: flex;
+    align-items: center;
+  }
+
+  .pricing-tier {
+    width: calc(100% / 3);
+  }
+
+  #professional-tier {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  #bg-bottom {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    height: auto;
+    z-index: -1;
+  }
+
+  .pricing-toggle {
+    width: 30%;
+  }
+
+  .pricing-tier > strong {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pricing-toggle {
+    width: 25%;
+  }
+
+  .pricing-tier > strong {
+    font-size: 3.75rem;
+  }
 }
